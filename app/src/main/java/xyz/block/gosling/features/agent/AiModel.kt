@@ -12,16 +12,20 @@ data class AiModel(
 ) {
     companion object {
         val AVAILABLE_MODELS = listOf(
-            AiModel("GPT-4.1", "gpt-4.1", ModelProvider.OPENAI),
-            AiModel("GPT-4o", "gpt-4o", ModelProvider.OPENAI),
+            // ChatAnywhere models
             AiModel("GPT-4o mini", "gpt-4o-mini", ModelProvider.OPENAI),
-            AiModel("O3 Mini", "o3-mini", ModelProvider.OPENAI),
-            AiModel("O3 Small", "o3-small", ModelProvider.OPENAI),
-            AiModel("O3 Medium", "o3-medium", ModelProvider.OPENAI),
-            AiModel("O3 Large", "o3-large", ModelProvider.OPENAI),
+            AiModel("GPT-4o", "gpt-4o", ModelProvider.OPENAI),
+            AiModel("GPT-4.1", "gpt-4.1", ModelProvider.OPENAI),
+            AiModel("GPT-4.1 mini", "gpt-4.1-mini", ModelProvider.OPENAI),
+            AiModel("GPT-4.1 nano", "gpt-4.1-nano", ModelProvider.OPENAI),
+            AiModel("GPT-5 mini", "gpt-5-mini", ModelProvider.OPENAI),
+            AiModel("GPT-5 nano", "gpt-5-nano", ModelProvider.OPENAI),
+            AiModel("DeepSeek R1", "deepseek-r1", ModelProvider.OPENAI),
+            AiModel("DeepSeek V3", "deepseek-v3", ModelProvider.OPENAI),
 
+            // Gemini models
             AiModel("Gemini Flash", "gemini-2.0-flash", ModelProvider.GEMINI),
-            AiModel("Gemini Flash light", "gemini-2.0-flash-lite", ModelProvider.GEMINI)
+            AiModel("Gemini Flash Lite", "gemini-2.0-flash-lite", ModelProvider.GEMINI)
         )
 
         fun fromIdentifier(identifier: String): AiModel {
