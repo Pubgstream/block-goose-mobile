@@ -749,7 +749,7 @@ class Agent : Service() {
         val processedMessages = removeOutdatedPayloads(messages)
 
         val urlString = when (model.provider) {
-            ModelProvider.OPENAI -> "https://api.openai.com/v1/chat/completions"
+            ModelProvider.OPENAI -> "https://api.chatanywhere.org/v1/chat/completions"
             ModelProvider.GEMINI -> "https://generativelanguage.googleapis.com/v1beta/models/${model.identifier}:generateContent?key=$apiKey"
         }
 
